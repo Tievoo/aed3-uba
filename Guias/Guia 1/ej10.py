@@ -10,7 +10,7 @@ def td(i, j, M = None):
     if i == -1:
         return 0
     if M[i][j] is None:
-        if j > w[i]:
+        if j > s[i]:
             M[i][j] = td(i-1, j, M)
         else:
             M[i][j] = max(td(i-1, j + w[i], M) + 1, td(i-1, j, M))
